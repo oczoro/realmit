@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Red Hat Mono', monospace;
+  background-color: rgb(10, 7, 16);
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+}
+
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  line-height: 1rem;
+}
+
+#terminal-wrapper {
+  width: 620px;
+  height: 300px;
+  border-width: 1px;
+  border-color: whitesmoke;
+  border-style: solid;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.terminal-header {
+  text-align: center;
+  padding: 8px 0;
+  width: 100%;
+  margin: 0px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.terminal-output {
+  padding: 8px;
+}
+
+#terminal {
+  color: rgb(238, 238, 238);
+}
+
+#typing::before {
+  content: 'root@realmit.eu:~$ ';
+  color: rgb(105, 232, 101);
+}
+
+#typing {
+  color: rgb(238, 238, 238);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#cursor {
+  color: rgb(238, 238, 238);
+  animation-name: blink;
+  animation-duration: 600ms;
+  animation-timing-function: cubic-bezier(1, -0.3, 0, 1.33);
+  animation-iteration-count: infinite;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-red {
+  color: rgb(232, 101, 101);
+}
+
+.text-orange {
+  color: rgb(232, 162, 101);
+}
+
+.text-lime {
+  color: rgb(105, 232, 101);
+}
+
+.text-blue {
+  color: rgb(101, 142, 232);
+}
+
+.text-link {
+  color: #00a6ff;
+}
+
+.text-100 {
+  color: rgb(238, 238, 238);
+}
+
+.text-200 {
+  color: rgb(154, 154, 154);
+}
+
+.text-300 {
+  color: rgb(105, 105, 105);
+}
+
+.text-400 {
+  color: rgb(33, 33, 33);
+}
