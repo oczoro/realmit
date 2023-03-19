@@ -50,9 +50,9 @@ async function index() {
   await writeOutput('ls', typing, 100);
   terminal.innerHTML += typing.outerHTML;
   terminal.innerHTML += `<pre>
-<span class="text-link">├── <a class="text-lime" href="/storage/storage.php">Storage</a></span>
-<span class="text-link">├── <a class="text-lime" href="/socials.html">Socials</a></span>
-<span class="text-link">└── <a class="text-lime" href="/blog.html">Blog</a></span>
+<span class="text-link">├── <a class="text-lime" href="/storage">Storage</a></span>
+<span class="text-link">├── <a class="text-lime" href="/socials">Socials</a></span>
+<span class="text-link">└── <a class="text-lime" href="/blog">Blog</a></span>
 
 </pre>`;
 
@@ -78,13 +78,13 @@ async function socials() {
 <span class="text-300 cursor" onclick="copyToClipboard('stdin@realmit.eu')">∷∷<span class="text-link">${mailSVG} stdin@realmit.eu <span class="text-link-200">..</span> ${clipboardSVG}</span>∷∷</span>
 <span class="text-300 cursor" onclick="copyToClipboard('${discordTag}')">∷∷<span class="text-link">${discordSVG} ${discordTagString} ${clipboardSVG}</span>∷∷</span>
 <span class="text-300 cursor" onclick="copyToClipboard('@realmit:matrix.org')">∷∷<span class="text-link">${matrixSVG} @realmit:matrix.org ${clipboardSVG}</span>∷∷</span>
-<span class="text-300">∷∷<span class="text-link"><a class="underline-none" href="https://twitter.com/mit131313131">${twitterSVG} Twitter <span class="text-link-200">...........</span> ${redirectSVG}</a></span>∷∷</span>
-<span class="text-300">∷∷<span class="text-link"><a class="underline-none" href="https://github.com/real-mit">${githubSVG} Github <span class="text-link-200">............</span> ${redirectSVG}</a></span>∷∷</span>
-<span class="text-300">∷∷<span class="text-link"><a class="underline-none" href="https://www.youtube.com/@nonamewizard8000/">${youtubeSvG} Youtube <span class="text-link-200">...........</span> ${redirectSVG}</a></span>∷∷</span>
-<span class="text-300">∷∷<span class="text-link"><a class="underline-none" href="https://www.twitch.tv/lowest">${twitchSVG} Twitch <span class="text-link-200">............</span> ${redirectSVG}</a></span>∷∷</span>
-<span class="text-300">∷∷<span class="text-link"><a class="underline-none" href="https://keybase.io/realmit">${keybaseSVG} Keybase <span class="text-link-200">...........</span> ${redirectSVG}</a></span>∷∷</span>
-<span class="text-300">∷∷<span class="text-link"><a class="underline-none" href="https://osu.ppy.sh/users/Emmet">${osuSVG} Osu <span class="text-link-200">...............</span> ${redirectSVG}</a></span>∷∷</span>
-<span class="text-300">∷∷<span class="text-link"><a class="underline-none" href="https://steamcommunity.com/id/Sneasel">${steamSVG} Steam <span class="text-link-200">.............</span> ${redirectSVG}</a></span>∷∷</span>
+<span class="text-300">∷∷<span class="text-link"><a class="underline-none" target="_blank" href="https://twitter.com/mit131313131">${twitterSVG} Twitter <span class="text-link-200">...........</span> ${redirectSVG}</a></span>∷∷</span>
+<span class="text-300">∷∷<span class="text-link"><a class="underline-none" target="_blank" href="https://github.com/real-mit">${githubSVG} Github <span class="text-link-200">............</span> ${redirectSVG}</a></span>∷∷</span>
+<span class="text-300">∷∷<span class="text-link"><a class="underline-none" target="_blank" href="https://www.youtube.com/@nonamewizard8000/">${youtubeSvG} Youtube <span class="text-link-200">...........</span> ${redirectSVG}</a></span>∷∷</span>
+<span class="text-300">∷∷<span class="text-link"><a class="underline-none" target="_blank" href="https://www.twitch.tv/lowest">${twitchSVG} Twitch <span class="text-link-200">............</span> ${redirectSVG}</a></span>∷∷</span>
+<span class="text-300">∷∷<span class="text-link"><a class="underline-none" target="_blank" href="https://keybase.io/realmit">${keybaseSVG} Keybase <span class="text-link-200">...........</span> ${redirectSVG}</a></span>∷∷</span>
+<span class="text-300">∷∷<span class="text-link"><a class="underline-none" target="_blank" href="https://osu.ppy.sh/users/Emmet">${osuSVG} Osu <span class="text-link-200">...............</span> ${redirectSVG}</a></span>∷∷</span>
+<span class="text-300">∷∷<span class="text-link"><a class="underline-none" target="_blank" href="https://steamcommunity.com/id/Sneasel">${steamSVG} Steam <span class="text-link-200">.............</span> ${redirectSVG}</a></span>∷∷</span>
 <span class="text-300">▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔</span>
 
 </pre>`;
@@ -95,9 +95,11 @@ async function socials() {
 const currentPath = window.location.pathname;
 
 switch (currentPath) {
+  case '/':
   case '/index.html':
     index();
     break;
+  case '/socials':
   case '/socials.html':
     socials();
     break;

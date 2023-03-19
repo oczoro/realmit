@@ -1,0 +1,23 @@
+{
+  "name": "mit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oczoro/realmit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oczoro/realmit/issues"
+  },
+  "homepage": "https://github.com/oczoro/realmit#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "serve-index": "^1.9.1"
+  }
+}

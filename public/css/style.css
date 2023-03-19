@@ -94,6 +94,40 @@ p {
   animation-iteration-count: infinite;
 }
 
+/* Blog */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: 12px;
+  height: 100%;
+}
+#posts-container {
+  flex: 1;
+}
+.posts-section {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 5px;
+}
+.posts-section h2 {
+  margin: 0;
+  padding: 0;
+}
+.posts-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.posts-section li {
+  margin-top: 4px;
+}
+
+/* Utility */
+
 .text-left {
   text-align: left;
 }
