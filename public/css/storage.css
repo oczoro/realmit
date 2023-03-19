@@ -131,7 +131,7 @@ ul#files li a.highlight {
   margin-bottom: 0;
   outline: none;
   opacity: 0.7;
-  color: #888;
+  color: #00a6ff; 
 }
 #search:focus {
   width: 120px;
